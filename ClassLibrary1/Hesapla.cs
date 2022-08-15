@@ -16,9 +16,11 @@ namespace ClassLibrary1
 			Age = 20;
 			Log log = new Log();
 			log.Logout();
+			Gender = 1;
 		}
 		public int Topla(int a, int b)
 		{
+			
 			return a + b;
 		}
 		internal int Cikar(int a, int b)
@@ -33,8 +35,21 @@ namespace ClassLibrary1
 		}
 		protected internal int Age { get; set; }
 
+		protected private int Gender { get; set; }
+
 		private class Log
 		{
+			public Log()
+			{
+				Hesapla h1 = new Hesapla();
+				h1.Gender = 1;
+				h1.Carp(10, 2);
+				h1.Topla(10, 2);
+				h1.Cikar(10, 2);
+				h1.Age = 20;
+				Logout();
+			}
+			
 			public void Logout() 
 			{
 				Console.WriteLine("Logout metotu");

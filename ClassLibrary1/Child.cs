@@ -17,6 +17,7 @@ namespace ClassLibrary1
 			H1.Topla(10, 2);
 			H1.Age = 30;
 			Carp(2, 5);
+			Gender = 1;
 		}
 	}
 }

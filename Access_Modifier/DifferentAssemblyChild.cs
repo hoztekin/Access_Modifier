@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace Access_Modifier
 {
-	public class Program 
+	public class DifferentAssemblyChild : Hesapla
 	{
-		static void Main(string[] args)
+		Hesapla H1 = new Hesapla();
+		public DifferentAssemblyChild()
 		{
-			Hesapla H1 = new Hesapla();
-
 			H1.Topla(10, 2);
+			Carp(10, 2);
+			Age = 25;
 			
 		}
 	}
